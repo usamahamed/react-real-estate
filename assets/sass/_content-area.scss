@@ -1,0 +1,333 @@
+
+#content-area {
+  overflow: auto;
+  width: 100%;
+  background: white;
+}
+
+#filter {
+  background: $lightgrey;
+  width: 20%;
+  height:100vh;
+  display: inline-block;
+  float: left;
+  padding: 5px;
+  position:fixed;
+
+
+  .inside {
+    padding: 20px;
+    max-width: 300px;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    margin: 10px 0 25px 0;
+    text-transform: uppercase;
+    font-weight: 500px;
+  }
+  select {
+    background:transparent;
+    padding:10px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #1b1b1b;
+    display: block;
+    margin: 2px 2px 25px 2px;
+    width: 95%;
+  }
+
+  span {
+    margin: 5px;
+  }
+
+  .filters {
+    .title {
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 1rem;
+      color: $darkpurple;
+    }
+    input[type="number"]{
+      border-radius: 5px;
+      font-size: 1rem;
+      padding: 0.4rem;
+      width: 45%;
+      margin-left: 3px;
+      display:inline-block;
+      margin-right: 2.5%;
+      margin-bottom: 1rem;
+    }
+
+    &.extras {
+      label{
+        display:block;
+        width: 100%;
+        padding: 10px 0;
+
+        input[type="checkbox"] {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+#Listings {
+  width: 80%;
+  float: left;
+  display: inline-block;
+  padding: 15px;
+  background: $offwhite;
+  position:absolute;
+  right: 0;
+
+
+  .search-area {
+    input[type="text"] {
+    width: 80%;
+    background: transparent;
+    font-size: 1.4rem;
+    border: none;
+    border: 2px solid $darkpurple;
+    margin-bottom: 20px;
+    padding: 2px;
+    color: black;
+    }
+  }
+  .sortby-area {
+    margin-bottom: 20px;
+        .results {
+      font-size: 1.35rem;
+      color: $darkpurple;
+      display: inline-block;
+
+    }
+    .sort-options {
+      float: right;
+      select {
+        font-size: 0.9rem;
+        font-weight: 300px;
+        border: 1px solid $gray;
+        background: transparent;
+        padding: 5px;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: top;
+      }
+      .view {
+        display: inline-block;
+
+      .fa {
+        margin-right: 15px;
+        font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .listings-results {
+    margin-bottom: 60px;
+    .listing {
+      background-color: #fff;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 8px 54px 0px rgba(214,214,214,1);
+      -moz-box-shadow: 0px 8px 54px 0px rgba(214,214,214,1);
+      box-shadow: 0px 8px 54px 0px rgba(214,214,214,1);
+    }
+    .listing_logo{
+      width: 100px;
+      height: 86px;
+      right: 0;
+      margin-left: 39%;
+    }
+    .listing-img {
+      color: white;
+      padding: 15px;
+      position: relative;
+      min-height:100%;
+      min-width: 100%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      min-height: 200px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      &:hover {
+        .details {
+          opacity: 1;
+        }
+        .address {
+          opacity: 0;
+          transition: all 0.4s ease-in-out
+
+        }
+      }
+
+      .address {
+        font-size: 1.3rem;
+        text-transform: capitalize;
+        position: absolute;
+        bottom: -72px;
+        text-shadow: 1px 1px 5px rgba(107, 88, 150, 1);
+      }
+
+      .details {
+        transition: all 0.4s ease-in-out;
+        opacity:0;
+        padding: 5px;
+        position: absolute;
+        text-align: center;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c22ad+0,eb89ff+100 */
+        background: rgba(76,34,173, .8); /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(76,34,173,.8) 0%, rgba(235,137,255,.8) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(76,34,173,.8) 0%,rgba(235,137,255,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(119, 181, 96, 0.8) 0%,rgba(218, 181, 97, 0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c22ad', endColorstr='#eb89ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        .user-img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin: 1px;
+          border: 0.4px solid white;
+          display: inline-block;
+          // background: url(https://cdn.freshome.com/wp-content/uploads/2014/04/Gorgeous-evening-view-of-Russet-Residence--1025x450.jpg)
+          // no-repeat center center;-webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+
+              .fa-user-o {
+                font-size: 35px;
+                align-items: center;
+              }
+        }
+        .user-details {
+          display: inline-block;
+          vertical-align: top;
+          .user-name {
+            font-size: 0.7rem;
+            font-weight: 300;
+            color: rgba(255,255,255, 1);
+            display: block;
+            margin: 1px;
+
+          }
+          .user-date {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: rgba(255,255,255, .7);
+            display: block;
+          }
+        }
+        .listing-details {
+            margin: 3px;
+            display:flex;
+            flex-wrap:wrap;
+            .fa{
+              display: inline-block;
+              margin: 3px;
+              font-size: 20px;
+              margin-right: 3px;
+              align-content: left;
+            }
+            span {
+              display: inline-block;
+              font-size: 1rem;
+              text-align: center;
+              position: relative;
+              top: 0.5px;
+              margin-left: 3px;
+            }
+            .floor-space {
+              margin-bottom: 5px;
+            }
+        }
+      }
+    }
+  }
+.bottom-info {
+  padding: 20px 15px;
+  .location {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin: 2px;
+    color: gray;
+    & i{
+      margin: 1px;
+    }
+  }
+  .price {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+    color: #5f4f4f;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+}
+
+.view-btn {
+  background: black;
+  padding: 8px;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  margin: 14px 0px 10px 28px;
+  max-width: 120px;
+  transition: background 0.2s ease-in-out;
+  &:hover {
+    background: $pink;
+    cursor: pointer;
+  }
+}
+
+#pagination {
+  width: 100%;
+  display: block;
+  text-align: center;
+  .row{
+    .pages{
+      display: inline-block;
+      background: white;
+      -webkit-box-shadow: 0px 8px 54px 0px rgba(214,214,214,1);
+      -moz-box-shadow: 0px 8px 54px 0px rgba(214,214,214,1);
+      box-shadow: 0px 8px 54px 0px rgba(214,214,214,1);
+      li {
+        padding:20px 30px;
+        display:inline-block;
+        &.active {
+          color: white;
+          font-weight: 700;
+          background: $pink;
+        }
+         &:hover:not(.active) {
+          color: white;
+          font-weight: 700;
+          background: $darkpurple;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+              
+
+
+   
